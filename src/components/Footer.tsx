@@ -10,12 +10,12 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">SB</span>
+                <span className="text-white font-bold text-lg">PW</span>
               </div>
-              <span className="text-white font-bold text-xl">SniperBot</span>
+              <span className="text-white font-bold text-xl">POWER</span>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
-              Advanced token sniper bot for Windows that monitors Twitter and Telegram for trading opportunities with lightning-fast execution.
+              Advanced token sniper bot for Solana chain that monitors Twitter and Telegram for trading opportunities with lightning-fast execution.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-colors">
@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
                 <a href="#features" className="text-white/70 hover:text-white transition-colors">Features</a>
               </li>
               <li>
-                <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors">How It Works</a>
+                <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors">How to Use</a>
               </li>
               <li>
-                <a href="#configure" className="text-white/70 hover:text-white transition-colors">Configure</a>
+                <a href="#configure" className="text-white/70 hover:text-white transition-colors">Config</a>
               </li>
               <li>
                 <a href="#download" className="text-white/70 hover:text-white transition-colors">Download</a>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} SniperBot. All rights reserved.
+            © {new Date().getFullYear()} POWER. All rights reserved.
           </p>
           <p className="text-white/50 text-sm">
             Trading cryptocurrencies involves risk. Use at your own discretion.
