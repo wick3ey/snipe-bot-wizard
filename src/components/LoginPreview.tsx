@@ -14,23 +14,23 @@ const LoginPreview: React.FC = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validera input
+    // Validate input
     if (!email.trim() || !password.trim()) {
-      setError('Vänligen fyll i alla fält');
+      setError('Please fill in all fields');
       return;
     }
     
     setLoading(true);
     setError('');
     
-    // Simulera inloggning
+    // Simulate login
     setTimeout(() => {
       setLoading(false);
       if (email === 'demo@example.com' && password === 'password') {
-        // Simulering av lyckad inloggning
-        console.log('Inloggad');
+        // Simulate successful login
+        console.log('Logged in');
       } else {
-        setError('Ogiltiga inloggningsuppgifter. Prova demo@example.com / password');
+        setError('Invalid login credentials. Try demo@example.com / password');
       }
     }, 1500);
   };
@@ -46,10 +46,10 @@ const LoginPreview: React.FC = () => {
             }`}
           >
             <h2 className="heading-lg mb-4">
-              <span className="text-gradient">Säker inloggning</span> till SniperBot
+              <span className="text-gradient">Secure Login</span> to SniperBot
             </h2>
             <p className="text-white/70 text-lg">
-              Kom åt dina trading-strategier och se realtidsresultat med vår säkra inloggningsportal
+              Access your trading strategies and view real-time results with our secure login portal
             </p>
           </div>
         </div>
@@ -59,8 +59,8 @@ const LoginPreview: React.FC = () => {
             <div className="h-16 w-16 rounded-full bg-gradient-to-r from-primary to-accent mx-auto flex items-center justify-center mb-4">
               <Lock className="h-8 w-8 text-white" />
             </div>
-            <h3 className="heading-sm">Logga in</h3>
-            <p className="text-white/60 text-sm mt-2">Få tillgång till din SniperBot Dashboard</p>
+            <h3 className="heading-sm">Log In</h3>
+            <p className="text-white/60 text-sm mt-2">Get access to your SniperBot Dashboard</p>
           </div>
           
           {error && (
@@ -74,7 +74,7 @@ const LoginPreview: React.FC = () => {
             <div className="space-y-4 mb-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
-                  E-postadress
+                  Email Address
                 </label>
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
@@ -83,7 +83,7 @@ const LoginPreview: React.FC = () => {
                   <input
                     id="email"
                     type="email"
-                    placeholder="din@email.com"
+                    placeholder="your@email.com"
                     className="glass-input w-full pl-10"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -93,7 +93,7 @@ const LoginPreview: React.FC = () => {
               
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-white/70 mb-2">
-                  Lösenord
+                  Password
                 </label>
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
@@ -127,20 +127,20 @@ const LoginPreview: React.FC = () => {
                 {loading ? (
                   <>
                     <span className="h-5 w-5 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></span>
-                    Loggar in...
+                    Logging in...
                   </>
                 ) : (
                   <>
                     <LogIn className="h-5 w-5 mr-2" />
-                    Logga in
+                    Log In
                   </>
                 )}
               </span>
             </button>
             
             <div className="mt-6 flex justify-between items-center text-sm text-white/60">
-              <a href="#" className="hover:text-white/90 transition-colors">Glömt lösenord?</a>
-              <a href="#" className="hover:text-white/90 transition-colors">Skapa konto</a>
+              <a href="#" className="hover:text-white/90 transition-colors">Forgot Password?</a>
+              <a href="#" className="hover:text-white/90 transition-colors">Create Account</a>
             </div>
           </form>
         </div>

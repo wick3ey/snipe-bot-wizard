@@ -21,21 +21,21 @@ const PlatformSelect: React.FC = () => {
             }`}
           >
             <h2 className="heading-lg mb-4">
-              <span className="text-gradient">Anpassa din</span> Sniper-strategi
+              <span className="text-gradient">Customize your</span> Sniper Strategy
             </h2>
             <p className="text-white/70 text-lg">
-              Välj plattform och konfigurera dina Take Profit och Stop Loss-nivåer för optimal avkastning
+              Choose platform and configure your Take Profit and Stop Loss levels for optimal returns
             </p>
           </div>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Plattformsval */}
+            {/* Platform Selection */}
             <div className="glass-card p-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <h3 className="heading-sm mb-6 flex items-center">
                 <BarChart4 className="h-6 w-6 mr-2 text-accent" />
-                Välj plattform
+                Select Platform
               </h3>
               
               <div className="space-y-4">
@@ -52,7 +52,7 @@ const PlatformSelect: React.FC = () => {
                   </div>
                   <div className="ml-4 text-left">
                     <h4 className="text-lg font-semibold">Twitter</h4>
-                    <p className="text-white/70 text-sm">Snipa tokens från Twitter-flöden och konton</p>
+                    <p className="text-white/70 text-sm">Snipe tokens from Twitter feeds and accounts</p>
                   </div>
                 </button>
                 
@@ -69,17 +69,17 @@ const PlatformSelect: React.FC = () => {
                   </div>
                   <div className="ml-4 text-left">
                     <h4 className="text-lg font-semibold">Telegram</h4>
-                    <p className="text-white/70 text-sm">Snipa tokens från populära Telegram-grupper</p>
+                    <p className="text-white/70 text-sm">Snipe tokens from popular Telegram groups</p>
                   </div>
                 </button>
               </div>
             </div>
             
-            {/* TP/SL Inställningar */}
+            {/* TP/SL Settings */}
             <div className="glass-card p-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <h3 className="heading-sm mb-6 flex items-center">
                 <LineChart className="h-6 w-6 mr-2 text-accent" />
-                Profit & Loss Inställningar
+                Profit & Loss Settings
               </h3>
               
               <div className="space-y-6">
@@ -139,7 +139,7 @@ const PlatformSelect: React.FC = () => {
                 >
                   <span className="flex items-center">
                     <Percent className="h-4 w-4 mr-2" />
-                    Avancerade inställningar
+                    Advanced Settings
                   </span>
                   <span>
                     {advanced ? '▲' : '▼'}
@@ -166,7 +166,7 @@ const PlatformSelect: React.FC = () => {
                     
                     <div>
                       <label className="block text-sm font-medium text-white/70 mb-2">
-                        Minsta Volym (SOL)
+                        Minimum Volume (SOL)
                       </label>
                       <input 
                         type="number"
@@ -185,7 +185,7 @@ const PlatformSelect: React.FC = () => {
             <button className="primary-button px-8 py-4">
               <span className="primary-button-content">
                 <Save className="h-5 w-5 mr-2" />
-                Spara inställningar och fortsätt
+                Save Settings and Continue
                 <ArrowRight className="h-5 w-5 ml-2" />
               </span>
             </button>
