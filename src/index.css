@@ -72,8 +72,10 @@
   }
   
   .primary-button {
-    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white bg-primary rounded-lg group;
+    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white bg-primary rounded-lg;
   }
+  
+  /* Add group class directly in HTML markup instead */
   
   .primary-button::before {
     @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-r from-accent to-primary opacity-0 transition-opacity duration-300 ease-out;

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Download, CheckCircle, Cpu, Shield, BarChart3 } from 'lucide-react';
+import { Download as DownloadIcon, CheckCircle, Cpu, Shield, BarChart3 } from 'lucide-react';
 import { useScrollAnimation } from '../lib/animations';
 
 const Download: React.FC = () => {
@@ -45,7 +45,7 @@ const Download: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="glass p-6 rounded-lg">
               <div className="w-12 h-12 mx-auto rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <Cpu size={24} className="text-accent" />
+                <Cpu className="h-6 w-6 text-accent" />
               </div>
               <h3 className="font-semibold mb-2">High Performance</h3>
               <p className="text-white/70 text-sm">Optimized for Windows systems with minimal resource usage</p>
@@ -53,7 +53,7 @@ const Download: React.FC = () => {
             
             <div className="glass p-6 rounded-lg">
               <div className="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Shield size={24} className="text-primary" />
+                <Shield className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Secure & Private</h3>
               <p className="text-white/70 text-sm">Your API keys and wallet data never leave your computer</p>
@@ -61,7 +61,7 @@ const Download: React.FC = () => {
             
             <div className="glass p-6 rounded-lg">
               <div className="w-12 h-12 mx-auto rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <BarChart3 size={24} className="text-accent" />
+                <BarChart3 className="h-6 w-6 text-accent" />
               </div>
               <h3 className="font-semibold mb-2">Advanced Analytics</h3>
               <p className="text-white/70 text-sm">In-depth trading reports and performance metrics</p>
@@ -69,7 +69,7 @@ const Download: React.FC = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="relative">
+            <div className="relative group">
               {!isDownloading && !isDownloaded && (
                 <>
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse-soft"></div>
@@ -78,7 +78,7 @@ const Download: React.FC = () => {
                     onClick={handleDownload}
                   >
                     <span className="primary-button-content">
-                      <Download size={20} className="mr-2" />
+                      <DownloadIcon className="h-5 w-5 mr-2" />
                       Download for Windows
                     </span>
                   </button>
@@ -97,7 +97,7 @@ const Download: React.FC = () => {
               {isDownloaded && (
                 <button className="relative bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg transition-colors">
                   <span className="flex items-center justify-center">
-                    <CheckCircle size={20} className="mr-2" />
+                    <CheckCircle className="h-5 w-5 mr-2" />
                     Download Started
                   </span>
                 </button>
