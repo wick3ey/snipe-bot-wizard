@@ -1,13 +1,19 @@
-
 import React, { useState } from 'react';
 import { ArrowRight, Twitter, MessageCircle, Bot, Send, Settings, RefreshCw, AlertCircle, DollarSign } from 'lucide-react';
 import { useScrollAnimation, useTypewriterEffect } from '../lib/animations';
+
+// Define the message type to include the isComplete property
+interface BotMessage {
+  type: string;
+  content: string;
+  isComplete?: boolean;
+}
 
 const Hero: React.FC = () => {
   const { ref, isVisible } = useScrollAnimation();
   const { displayText } = useTypewriterEffect("Instantly snipe tokens on Twitter and Telegram", 50);
   const [inputValue, setInputValue] = useState('');
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<BotMessage[]>([
     { type: 'bot', content: 'Welcome to Token Sniper Bot! I can help you set up automated trading for new tokens mentioned on Twitter and Telegram.' },
     { type: 'bot', content: 'What Twitter account would you like to monitor for token mentions?' }
   ]);
@@ -20,7 +26,7 @@ const Hero: React.FC = () => {
     
     // Simulate bot response
     setTimeout(() => {
-      let botResponse;
+      let botResponse: BotMessage | undefined;
       if (messages.length === 2) {
         botResponse = { type: 'bot', content: `Great! I'll monitor @${inputValue} for new token mentions. How much SOL would you like to allocate per trade?` };
       } else if (messages.length === 4) {
@@ -34,7 +40,7 @@ const Hero: React.FC = () => {
       }
       
       if (botResponse) {
-        setMessages(prev => [...prev, botResponse]);
+        setMessages(prev => [...prev, botResponse as BotMessage]);
       }
       
       setInputValue('');
