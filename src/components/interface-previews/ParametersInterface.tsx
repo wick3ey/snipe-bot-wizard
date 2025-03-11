@@ -113,7 +113,7 @@ const ParametersInterface: React.FC = () => {
               <div className="flex items-center">
                 <div className="h-4 w-4 border border-white/30 rounded mr-2">
                 </div>
-                <span className="text-xs text-white/70">Dev wallet sells >5%</span>
+                <span className="text-xs text-white/70">Dev wallet sells {'>'} 5%</span>
               </div>
             </div>
           </div>
