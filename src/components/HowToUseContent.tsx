@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { 
   Download, Monitor, User, Key, LogIn, Twitter, MessageCircle, 
   Settings, DollarSign, Percent, ArrowRight, CheckCircle, Terminal,
-  RefreshCw, Shield, CircleAlert, Clock, ArrowDownCircle, LaptopMac
+  RefreshCw, Shield, CircleAlert, Clock, ArrowDownCircle, Laptop
 } from 'lucide-react';
 import { useScrollAnimation } from '../lib/animations';
 
@@ -174,7 +174,7 @@ const HowToUseContent: React.FC = () => {
               disabled
               className="flex items-center space-x-2 px-6 py-3 rounded-lg transition-all bg-white/5 border border-white/10 text-white/50 cursor-not-allowed"
             >
-              <LaptopMac size={20} />
+              <Laptop size={20} />
               <span>macOS (Coming Soon)</span>
             </button>
           </div>
