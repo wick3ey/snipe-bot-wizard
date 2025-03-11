@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,18 +23,18 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-lg">PW</span>
           </div>
           <span className="text-white font-bold text-xl">POWER</span>
-        </a>
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#how-it-works" className="text-white/80 hover:text-white transition-colors">How to Use</a>
-          <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
-          <a href="#configure" className="text-white/80 hover:text-white transition-colors">Config</a>
-          <a href="#download" className="primary-button">
+          <Link to="/how-to-use" className="text-white/80 hover:text-white transition-colors">How to Use</Link>
+          <a href="/#features" className="text-white/80 hover:text-white transition-colors">Features</a>
+          <a href="/#configure" className="text-white/80 hover:text-white transition-colors">Config</a>
+          <a href="/#download" className="primary-button">
             <span className="primary-button-content">Download</span>
           </a>
         </nav>
@@ -50,29 +51,29 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden glass absolute top-full left-0 right-0 p-4 border-t border-white/10 animate-fade-in">
           <nav className="flex flex-col space-y-4">
-            <a 
-              href="#how-it-works" 
+            <Link 
+              to="/how-to-use" 
               className="text-white/80 hover:text-white transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               How to Use
-            </a>
+            </Link>
             <a 
-              href="#features" 
+              href="/#features" 
               className="text-white/80 hover:text-white transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </a>
             <a 
-              href="#configure" 
+              href="/#configure" 
               className="text-white/80 hover:text-white transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Config
             </a>
             <a 
-              href="#download" 
+              href="/#download" 
               className="primary-button w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
