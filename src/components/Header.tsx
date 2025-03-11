@@ -35,6 +35,7 @@ const Header: React.FC = () => {
           <a href="/#features" className="text-white/80 hover:text-white transition-colors">Features</a>
           <a href="/#configure" className="text-white/80 hover:text-white transition-colors">Config</a>
           <Link to="/privacy-policy" className="text-white/80 hover:text-white transition-colors">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="text-white/80 hover:text-white transition-colors">Terms</Link>
           <a href="/#download" className="primary-button">
             <span className="primary-button-content">Download</span>
           </a>
@@ -79,6 +80,13 @@ const Header: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Privacy Policy
+            </Link>
+            <Link 
+              to="/terms-of-service" 
+              className="text-white/80 hover:text-white transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Terms of Service
             </Link>
             <a 
               href="/#download" 

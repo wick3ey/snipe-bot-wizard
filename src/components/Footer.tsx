@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Twitter, MessageCircle, Github, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -37,19 +38,19 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">Home</a>
+                <a href="/" className="text-white/70 hover:text-white transition-colors">Home</a>
               </li>
               <li>
-                <a href="#features" className="text-white/70 hover:text-white transition-colors">Features</a>
+                <a href="/#features" className="text-white/70 hover:text-white transition-colors">Features</a>
               </li>
               <li>
-                <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors">How to Use</a>
+                <a href="/how-to-use" className="text-white/70 hover:text-white transition-colors">How to Use</a>
               </li>
               <li>
-                <a href="#configure" className="text-white/70 hover:text-white transition-colors">Config</a>
+                <a href="/#configure" className="text-white/70 hover:text-white transition-colors">Config</a>
               </li>
               <li>
-                <a href="#download" className="text-white/70 hover:text-white transition-colors">Download</a>
+                <a href="/#download" className="text-white/70 hover:text-white transition-colors">Download</a>
               </li>
             </ul>
           </div>
@@ -58,16 +59,10 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">Terms of Service</a>
+                <Link to="/terms-of-service" className="text-white/70 hover:text-white transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">Disclaimer</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">Contact</a>
+                <Link to="/privacy-policy" className="text-white/70 hover:text-white transition-colors">Privacy Policy</Link>
               </li>
             </ul>
           </div>
