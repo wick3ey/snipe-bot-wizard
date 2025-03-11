@@ -26,7 +26,7 @@ const HowToUseContent: React.FC = () => {
       title: "Download POWER",
       description: "Get the latest version for your operating system",
       icon: <Download className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&h=350&fit=crop",
       details: [
         "Download the latest version of POWER",
         "Windows version: PowerSetup-2.0.3.exe (24MB)",
@@ -39,7 +39,7 @@ const HowToUseContent: React.FC = () => {
       title: "Create Account",
       description: "Set up your POWER account to get started",
       icon: <User className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=350&fit=crop",
       details: [
         "Open the POWER application after installation",
         "Click on 'Create New Account'",
@@ -52,7 +52,7 @@ const HowToUseContent: React.FC = () => {
       title: "Setup API Keys",
       description: "Configure your wallet and API access",
       icon: <Key className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=350&fit=crop",
       details: [
         "Navigate to the 'Settings' section",
         "Connect your Solana wallet address",
@@ -65,7 +65,7 @@ const HowToUseContent: React.FC = () => {
       title: "Login to POWER",
       description: "Access your dashboard and trading interface",
       icon: <LogIn className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=350&fit=crop",
       details: [
         "Enter your email and password",
         "Enable 2FA for additional security (recommended)",
@@ -78,7 +78,7 @@ const HowToUseContent: React.FC = () => {
       title: "Connect Social Platforms",
       description: "Link Twitter or Telegram for monitoring",
       icon: <Twitter className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=350&fit=crop",
       details: [
         "Go to 'Connections' tab",
         "Choose Twitter or Telegram as your source",
@@ -91,7 +91,7 @@ const HowToUseContent: React.FC = () => {
       title: "Custom Parameters",
       description: "Tailor the sniper bot to your strategy",
       icon: <Settings className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=350&fit=crop",
       details: [
         "Set custom token filters (marketcap, liquidity, etc.)",
         "Configure keyword triggers for automatic sniping",
@@ -104,7 +104,7 @@ const HowToUseContent: React.FC = () => {
       title: "SOL Amount",
       description: "Specify your investment per transaction",
       icon: <DollarSign className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=350&fit=crop",
       details: [
         "Navigate to 'Trading Settings'",
         "Set default SOL amount for each transaction",
@@ -117,7 +117,7 @@ const HowToUseContent: React.FC = () => {
       title: "Slippage Settings",
       description: "Optimize execution with slippage control",
       icon: <Percent className="h-8 w-8 text-accent" />,
-      image: "/placeholder.svg", // Replace with actual screenshot
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=350&fit=crop",
       details: [
         "Configure slippage tolerance percentage",
         "Set up dynamic slippage based on liquidity",
@@ -126,6 +126,35 @@ const HowToUseContent: React.FC = () => {
       ]
     },
   ];
+
+  // Interface preview component for each step
+  const InterfacePreview = ({ step }: { step: Step }) => {
+    return (
+      <div className="relative rounded-lg overflow-hidden border-2 border-white/10 shadow-lg transition-all hover:scale-105 duration-300 group">
+        {/* Main image */}
+        <div className="relative overflow-hidden">
+          <img 
+            src={step.image} 
+            alt={`${step.title} interface preview`}
+            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          
+          {/* Overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          
+          {/* Step indicator */}
+          <div className="absolute top-3 right-3 bg-accent text-black text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+            {step.id}
+          </div>
+        </div>
+        
+        {/* Interface caption */}
+        <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/60 backdrop-blur-sm">
+          <p className="text-xs sm:text-sm font-medium text-white">{step.title} Interface</p>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="pt-24 pb-16">
@@ -145,7 +174,7 @@ const HowToUseContent: React.FC = () => {
           </p>
           
           {/* OS Selector */}
-          <div className="flex justify-center items-center mb-10 space-x-4">
+          <div className="flex flex-wrap justify-center items-center mb-10 gap-4">
             <button
               onClick={() => setSelectedOS('windows')}
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all ${
@@ -296,11 +325,8 @@ const HowToUseContent: React.FC = () => {
                     </div>
                     
                     <div className="md:w-[250px] flex-shrink-0">
-                      {/* Placeholder for screenshot/illustration */}
-                      <div className="aspect-[3/4] bg-black/20 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center">
-                        {/* Replace with actual image */}
-                        <RefreshCw className="h-10 w-10 text-white/20" />
-                      </div>
+                      {/* Interface Preview */}
+                      <InterfacePreview step={step} />
                     </div>
                   </div>
                 </div>
